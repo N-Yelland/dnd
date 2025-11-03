@@ -9,8 +9,6 @@ var map_y = 0;
 
 const map = $("#map");
 
-const aspect_ratio = map.height() / map.width();
-
 const type_data = {
     "feature": {
         size: 6
@@ -63,18 +61,29 @@ const decimal_precision = 5;
 
 const boundary_threshold = 10;
 
+const aspect_ratio = map.height() / map.width();
+
 const region_width = $("#map-region").width();
 const region_height = $("#map-region").height();
 
-if (region_height / region_height > aspect_ratio) {
+const region_aspect_ratio = region_height / region_width;
+
+if (parseFloat(localStorage.getItem("region_aspect_ratio")) != region_aspect_ratio) {
+    // if region aspect ratio changes, we don't attempt to preserve map zoom/position
+    localStorage.clear();
+}
+localStorage.setItem("region_aspect_ratio", region_aspect_ratio);
+
+if (region_height / region_width < 1) {
     map.height(region_width * aspect_ratio);
 } else {
+    // portrait
     map.height(region_height);
 }
 
 const init_height = map.height();
 
-var zoom = 110;
+var zoom = 200;
 var prev_zoom = localStorage.getItem("zoom");
 if (prev_zoom) {
     zoom = parseFloat(prev_zoom);
@@ -222,11 +231,15 @@ var map_data;
 $.getJSON("data.json", function (data) {
     map_data = data;
 
-    var init_map_pos = {x: 0, y:0}
-    var prev_map_xy = localStorage.getItem("map_xy");
-    if (prev_map_xy) {
-        init_map_pos = JSON.parse(prev_map_xy);
+    // inital location has Brightwater at the centre
+    var init_map_pos = {
+        x: 0.5 * region_width - 0.53800 * init_height * zoom * 0.01 / aspect_ratio,
+        y: 0.5 * region_height - 0.30749 * init_height * zoom * 0.01
     }
+    // var prev_map_xy = localStorage.getItem("map_xy");
+    // if (prev_map_xy) {
+    //     init_map_pos = JSON.parse(prev_map_xy);
+    // }
 
     $("#map, #labels").css({
         height: init_height * zoom * 0.01,
@@ -234,8 +247,6 @@ $.getJSON("data.json", function (data) {
         top: init_map_pos.y,
         left: init_map_pos.x
     });
-
-   
 
     // create and position label elements
     map_data.objects.forEach(object => {
