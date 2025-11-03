@@ -61,16 +61,20 @@ const font_sf = 1 / 700;
 
 const decimal_precision = 5;
 
-const boundary_threshold = 5;
+const boundary_threshold = 10;
 
 const region_width = $("#map-region").width();
 const region_height = $("#map-region").height();
 
-map.height(region_width * aspect_ratio);
+if (region_height / region_height > aspect_ratio) {
+    map.height(region_width * aspect_ratio);
+} else {
+    map.height(region_height);
+}
 
 const init_height = map.height();
 
-var zoom = 100;
+var zoom = 110;
 var prev_zoom = localStorage.getItem("zoom");
 if (prev_zoom) {
     zoom = parseFloat(prev_zoom);
