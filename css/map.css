@@ -5,7 +5,6 @@
     margin: 2.5vw;
     height: calc(100vh - 5vw);
     position: relative;
-
     overflow: hidden;
 
     cursor: crosshair;
@@ -19,10 +18,6 @@
     aspect-ratio: initial;
 }
 
-#map, #labels {
-    /* transition: transform 0.05s;  */
-    transform-origin: 0 0;
-}
 
 #map-region:active {
     cursor: crosshair;
@@ -95,7 +90,7 @@
 }
 
 #labels {
-    border: solid blue;
+    /* border: solid blue; */
 
     position: absolute;
 

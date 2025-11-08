@@ -25,9 +25,14 @@
 </head>
 <body>
     <div id="map-region">
-        <img id="map" class="map-img" data-map-x=0 data-map-y=0 src="img/map_of_erran.png">
-
-        <div id="labels"></div>
+        <div class="container">
+            <div class="moveable">
+                <div class="scalable">
+                    <img id="map" class="map-img" data-map-x=0 data-map-y=0 src="img/map_of_erran.png">
+                    <div id="labels"></div>
+                </div>
+            </div>
+        </div>
 
         <div id="infobox" class="hidden">
             <div class="content">
@@ -43,6 +48,7 @@
         <div id="last-click" style="color:gold"></div>
     </div>
 
+    <script type="text/javascript" src="js/pan_zoom.js"></script>
     <script type="text/javascript" src="js/map.js"></script>
 </body>
 </html>
