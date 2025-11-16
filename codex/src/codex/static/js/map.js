@@ -62,13 +62,15 @@ function load_into_infobox(src) {
     fetch(escaped_src).then(response => {
         return response.text();
     }).then(data => {
-        var hash = escaped_src.split("#")[1];
+        const hash = escaped_src.split("#")[1];
         if (hash) {
-            var content = $(data).find(`#${hash}`).html();
+            const content = $(data).find(`#${hash}`).html();
+            const classes = $(data).find(`#${hash}`).attr("class");
         } else {
             var content = data;
         }
         $("#infobox .content").html(content);
+        $("#infobox .content").attr("class", classes);
         
         $("#infobox h2").enlargeLowerCase();
         // $("#infobox").addSmartQuotes()
