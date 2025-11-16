@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: build_codex
 
 # Controls when the workflow will run
 on:
@@ -39,6 +39,8 @@ jobs:
       - name: Build Sphinx documentation
         run: |
           source .venv/bin/activate
+          ls -R .venv/
+          which sphinx-build
           sphinx-build -b html source build
 
       - name: Upload arficact for GitHub Pages
