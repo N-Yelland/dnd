@@ -17,7 +17,7 @@ name_of_theme = "codex"
 package-dir = {"" = "src"}
 
 [tool.setuptools.package-data]
-codex = ["layout.html", "theme.toml", "static/**", "templates/**"]
+codex = ["*.html", "theme.toml", "static/**", "templates/**"]
 
 [build-system]
 requires = ["setuptools>=61.0", "wheel"]
