@@ -39,7 +39,7 @@ jobs:
       - name: Build Sphinx documentation
         run: |
           source .venv/bin/activate
-          ls -R .venv/
+          ls -R .venv/lib/python3.14/site-packages/codex
           which sphinx-build
           sphinx-build -b html source build
 
