@@ -7,9 +7,9 @@ Visit the site [here](https://n-yelland.github.io/dnd-campaign/).
 
 ## Contents
 
-- `source`: This includes all the *content* about the campaign, both text files (as ReStructuredText) and other media (e.g., images) which is stored in the `_static` folder. There is also `conf.py`, which is used by Sphinx/Codex to configure the building of the HTML site.
+- `source`: This includes all the *content* about the campaign, both text files (as ReStructuredText) and other media (e.g., images) which are stored in the `_static` folder. There is also `conf.py`, which is used by Sphinx/Codex to configure the building of the HTML site.
 
-- `codex`: A Python package that adds a Sphinx extension for medieval-style HTML builds, along with several features useful for D&D campaign documentation.
+- `codex`: A Python package that adds a Sphinx extension for medieval-style HTML builds, along with several features useful for D&D campaign documentation. See more detail [here](codex/README.md).
 
 - `demos`: A place for testing/demonstration code.
 

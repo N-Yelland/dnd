@@ -7,7 +7,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'dnd-campaign'
+project = 'The Blighted & The Blessed'
 copyright = '2025, Nic Yelland'
 author = 'Nic Yelland'
 

@@ -12,13 +12,20 @@ from sphinx.builders.html._assets import _CascadingStyleSheet, _JavaScript
 from codex.directives import LocationDirective, MapDirective, map_node
 
 
+__version__ = "1.0"
+
 logger = logging.getLogger(__name__)
 
-MAP_CSS_FILES = ["map.css", "style.css", "info.css"]
+MAP_CSS_FILES = ["map.css", "info.css"]
 MAP_JS_FILES = ["pan_zoom.js", "map.js"]
 
 
-def write_map_data_json(app: Sphinx) -> None:
+def write_map_data_json(app: Sphinx, exception: Exception | None) -> None:
+    if exception is not None:
+        logger.error(
+            f"Will not write map data JSON file due to exception in build process: {exception}")
+        return
+
     data: list[dict[str, Any]] = list(getattr(app.env, "all_locations", {}).values())
     output_path = Path(app.outdir / "map_data.json")
     try:
@@ -29,9 +36,14 @@ def write_map_data_json(app: Sphinx) -> None:
         logger.warning(f"Failed to write map_data.json: {e}")
 
 
-def add_map_to_file(app: Sphinx, pagename, _templatename, context: dict[str, Any], _doctree):
+def update_context(app: Sphinx, pagename, _templatename, context: dict[str, Any], _doctree):
+
+    # First, update the context to include the current version of Codex:
+    context["codex_version"] = __version__
+
+    # Then add the necessary JS/CSS files to the headers of pages with "_codex_map_data" in their
+    # metdata - this corresponds to pages whose RST contains map directives.
     metadata = app.builder.env.metadata.get(pagename, {})
-    # map_data = metadata.get("_codex_map_data", {})
     if "_codex_map_data" not in metadata:
         return
     
@@ -55,9 +67,7 @@ def add_map_to_file(app: Sphinx, pagename, _templatename, context: dict[str, Any
                     break
             else:
                 target.append(_type(url, priority=1000))
-    
-    write_map_data_json(app)
-    
+
 
 def setup_extension(app: Sphinx):
     app.setup_extension("sphinxcontrib.jquery")
@@ -78,7 +88,8 @@ def setup_extension(app: Sphinx):
 
     app.add_html_theme("codex", Path(__file__).resolve().parent)
 
-    app.connect("html-page-context", add_map_to_file)
+    app.connect("html-page-context", update_context)
+    app.connect("build-finished", write_map_data_json)
 
 
 # if __name__ == "__main__":

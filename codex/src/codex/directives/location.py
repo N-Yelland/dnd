@@ -44,7 +44,7 @@ class LocationDirective(SphinxDirective):
             "label_offset": self.options.get("label_offset")
         }
 
-        section_node = nodes.section(ids=[section_id])
+        section_node = nodes.section(ids=[section_id], classes=["location"])
         title_node = nodes.title(text=name)
 
         section_node += title_node

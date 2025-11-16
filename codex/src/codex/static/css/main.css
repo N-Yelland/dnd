@@ -1,11 +1,11 @@
 
-body {
-    margin: 0;
-    font-family: "IM Fell English", serif;
+html {
     background-color: rgb(46, 45, 42);
 }
 
-.body[role=main] {
+body {
+    font-family: "IM Fell English", serif;
+
     border: solid #75755c;
     background-color: #d3d3b7;
     box-sizing: border-box;
@@ -13,14 +13,22 @@ body {
     margin: auto;
     margin-top: 15px;
     margin-bottom: 15px;
-    max-width: 900px;
+    max-width: 800px;
     min-height: calc(100vh - 30px);
     padding: 15px;
 
     position: relative;
 }
 
-.body[role=main] > section > section {
+a {
+    color: rgb(187, 14, 14);
+}
+
+a:visited {
+    color: rgb(97, 9, 9);
+}
+
+section.location {
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -31,7 +39,7 @@ body {
     border-top: solid #75755c 2pt;
 }
 
-h1, h2, h2 + p {
+h1, h2, .location h2 + p {
     font-family: "IM Fell English SC", serif;
     margin: 0;
     line-height: 1em;
@@ -49,7 +57,7 @@ h2 {
     font-size: 2em;
 }
 
-h2 + p {
+.location h2 + p {
     font-weight: normal;
     text-transform: lowercase;
     color: #75755c;
@@ -64,11 +72,6 @@ h3 {
     font-size: 1.25em;
     font-weight: normal;
     pointer-events: none;
-}
-
-/* TODO: style navigation blocks */
-[role=navigation] {
-    display: none;
 }
 
 a.headerlink {
@@ -92,4 +95,70 @@ a.headerlink {
     color: #75755c;
     text-align: center;
     margin-bottom: 5px;
+    margin-top: 10px;
 }
+
+.admonition {
+    background-color: #f0f0e5;
+}
+
+div.sphinxsidebar {
+    float: none;
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-100%, 0);
+    display: block;
+
+    text-align: right;
+}
+
+div.sphinxsidebarwrapper {
+    padding: 0;
+}
+
+div.sphinxsidebar [role=heading] {
+    display: none;
+}
+
+div.sphinxsidebar a {
+
+    box-sizing: border-box;
+
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    padding: 5px;
+
+    background-color: rgb(187, 14, 14);
+
+    border-left: thick double rgb(97, 9, 9);
+    border-top: thick double rgb(97, 9, 9);
+    border-bottom: thick double rgb(97, 9, 9);
+
+    color: black;
+    text-decoration: none;
+
+    font-size: 1.1em;
+
+    transition: transform 0.25s, filter 0.25s;
+    transform-origin: 100% 50%;
+    filter: brightness(0.8);
+}
+
+div.sphinxsidebar a:visited {
+    color: black;
+}
+
+div.sphinxsidebar a:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+div.sphinxsidebar .toctree-l1 ul {
+    list-style: none;
+    padding-inline-start: 0;
+}
+

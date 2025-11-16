@@ -2,24 +2,29 @@
 {% extends "basic/layout.html" %}
 
 {% block linktags %}
-    <!-- IM Fell English Font -->
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
-    {{ super() }}
+  <!-- IM Fell English Font -->
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+  {{ super() }}
+{% endblock %}
+
+{% block document %}
+  {{ super() }}
 {% endblock %}
 
 {% block footer %}
-        <div class="footer" role="contentinfo">
-    {%- if show_copyright %}
-        {{- copyright_block() -}}
-    {%- endif %}
-    {%- if last_updated %}
-      {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
-    {%- endif %}
-    {%- if show_sphinx %}
-      {% trans sphinx_version=sphinx_version|e %}Created using Codex, a custom theme for
-      <a href="https://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
-    {%- endif %}
-    </div>
+    <div class="footer" role="contentinfo">
+  {%- if show_copyright %}
+    {{- copyright_block() -}}
+  {%- endif %}
+  {%- if last_updated %}
+    {% trans last_updated=last_updated|e %}Last updated on {{ last_updated }}.{% endtrans %}
+  {%- endif %}
+  {%- if show_sphinx %}
+    <br>
+    {% trans sphinx_version=sphinx_version|e %}Created using Codex {{ codex_version }}, a custom theme for
+    <a href="https://www.sphinx-doc.org/">Sphinx</a> {{ sphinx_version }}.{% endtrans %}
+  {%- endif %}
+  </div>
 {% endblock %}
 
