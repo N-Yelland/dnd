@@ -1,7 +1,3 @@
-import sys
-
-from pathlib import Path
-
 
 # Configuration file for the Sphinx documentation builder.
 #
@@ -28,8 +24,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-
-sys.path.append(str(Path('../codex').resolve()))
 
 html_static_path = ['_static']
 
