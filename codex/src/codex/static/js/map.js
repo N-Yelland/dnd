@@ -63,14 +63,17 @@ function load_into_infobox(src) {
         return response.text();
     }).then(data => {
         const hash = escaped_src.split("#")[1];
+        var classes = null;
         if (hash) {
             const content = $(data).find(`#${hash}`).html();
-            const classes = $(data).find(`#${hash}`).attr("class");
+            classes = $(data).find(`#${hash}`).attr("class");
         } else {
             var content = data;
         }
         $("#infobox .content").html(content);
-        $("#infobox .content").attr("class", classes);
+        if (classes) {
+            $("#infobox .content").attr("class", classes);
+        }
         
         $("#infobox h2").enlargeLowerCase();
         // $("#infobox").addSmartQuotes()
