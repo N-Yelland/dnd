@@ -19,6 +19,7 @@ class map_node(nodes.General, nodes.Element):
         img_src = "_static/" + node.get("img_src", "")
         labels_src = "_static/" + node.get("labels_src", "")
 
+        # TODO: Switch to using a Jinja template!
         html = f"""
             <div id="map-region">
                 <div class="container">
@@ -37,10 +38,24 @@ class map_node(nodes.General, nodes.Element):
                     <div class="close-btn">Close</div>
                 </div>
 
-                <div id="view-info">
-                    <div id="zoom"></div>
-                    <div id="cursor-coords"></div>
-                    <div id="click-coords"></div>
+                <div class="map-sidebar">
+                    <div id="view-info">
+                        <div id="zoom"></div>
+                        <div id="cursor-coords"></div>
+                        <div id="click-coords"></div>
+                    </div>
+
+                    <div id="fullscreen-button" class="map-control-button" title="Fullscreen">
+                        <img class="button-icon" src="_static/img/control_icons/fullscreen.svg">
+                    </div>
+
+                    <div id="zoom-in-button" class="map-control-button" title="Zoom In">
+                        <img class="button-icon" src="_static/img/control_icons/zoom_in.svg">
+                    </div>
+
+                    <div id="zoom-out-button" class="map-control-button" title="Zoom Out">
+                        <img class="button-icon" src="_static/img/control_icons/zoom_out.svg">
+                    </div>
                 </div>
         """
         ht.body.append(html)

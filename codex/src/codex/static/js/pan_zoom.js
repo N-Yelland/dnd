@@ -178,7 +178,6 @@ $(document).ready(function () {
 
             const zoom_direction = (e.originalEvent.deltaY > 0) ? -1 : 1;
             zoom *= Math.pow(ZOOM_TICK, zoom_direction);
-
             adjust_zoom(e.originalEvent.pageX, e.originalEvent.pageY, zoom);
         }
     });

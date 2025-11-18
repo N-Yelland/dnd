@@ -72,7 +72,6 @@ function load_into_infobox(src) {
             content = data;
         }
 
-        console.log(content);
         $("#infobox .content").html(content);
         // pass target classes to content div
         if (classes) {
@@ -174,7 +173,7 @@ function add_map_object(object) {
     var label_type = type_data[object.type];
 
     if (label_type.icon) {
-        var src = `_static/img/icons/${label_type.icon}.png`;
+        var src = `_static/img/map_icons/${label_type.icon}.png`;
         var icon_div = $(`<img class="map-icon map-obj ${object.type}" src=${src}>`);
         var height = label_type.size
         if (label_type.icon_size) {
@@ -332,6 +331,37 @@ $(document).ready(function () {
 
         }
     });
+    
+    /* MAP CONTROLS */
+
+    $("#fullscreen-button").on("click", function () {
+        toggle_full_screen();
+    });
+
+    $("#zoom-in-button").on("click", function () {
+        zoom *= Math.pow(ZOOM_TICK, 2);
+        adjust_zoom($(document).width()/2, $(document).height()/2, zoom);
+    });
+
+    $("#zoom-out-button").on("click", function () {
+        zoom *= Math.pow(ZOOM_TICK, -2);
+        adjust_zoom($(document).width()/2, $(document).height()/2, zoom);
+    });
 
     update_opacity();
 });
+
+function toggle_full_screen() {
+    $("#map-region").toggleClass("fullscreen");
+
+    var title, src
+    if ($("#map-region").hasClass("fullscreen")) {
+        title = "Exit Fullscreen";
+        src = "_static/img/control_icons/fullscreen_exit.svg";
+    } else {
+        title = "Fullscreen";
+        src = "_static/img/control_icons/fullscreen.svg";
+    }
+    $("#fullscreen-button").attr("title", title);
+    $("#fullscreen-button .button-icon").attr("src", src);
+}
