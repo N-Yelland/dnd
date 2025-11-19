@@ -29,6 +29,8 @@ html_static_path = ['_static']
 
 html_last_updated_fmt = ""
 
+html_title = "The Blighted & The Blessed"
+
 extensions = ['codex']
 
 
