@@ -12,11 +12,11 @@ You were born sometime in the first few centuries of the Years of Longing (YL), 
 Religion & Governance
 ---------------------
 
-Your "recruiter", Mariah Fairford, is the Mother Overseer of the Lembrow Sanitorium, an establishment of the **Church of Brightwater**. This is a major religious order originating in Brightwater during the Years of Darkness, and now spread throughout Erran. They worship the **Blessed Saints**, once mortal Blessed individuals who, generations ago, sacrificed themselves heroically in the enduring fight against the Blight. Their ascent to divine status is made possible by the focussed worship of the Church.
+Your "recruiter", Mariah Fairford, is the Mother Overseer of the Lembrow Sanatorium, an establishment of the **Church of Brightwater**. This is a major religious order originating in Brightwater during the Years of Darkness, and now spread throughout Erran. They worship the **Blessed Saints**, once mortal Blessed individuals who, generations ago, sacrificed themselves heroically in the enduring fight against the Blight. Their ascent to divine status is made possible by the focussed worship of the Church.
 
 *Perhaps you were a devotee of the church. Where did you work? What made you leave your position?*
 
-- **Attendants** work in sanitoria to care for afflicted patients. While rarely can they cure the disease, they can at least ease one's suffering… [Acolyte]
+- **Attendants** work in sanatoria to care for afflicted patients. While rarely can they cure the disease, they can at least ease one's suffering… [Acolyte]
 - **Alchemicals** work in refineries, and learn the advanced techniques to produce reversing elixir, the only known cure to Silverblight. [Artisan, Sage, Scribe]
 - **Itinerants** work between the two, and collect the all-important alms and charity to allow the Church's vital work to continue. [Soldier, Guide]
 
@@ -69,7 +69,7 @@ The **Elves**, with their luxuriant lifespans and affinity with nature, consider
 
 Despite this, the Elvish Lords [Noble] continue to send Blessed Elves to the border regions of their lands as “Guardians” to “fend off” any Blighted onslaught [Soldier, Guard]. Though it is not unheard of for Elven Guardians to take pity on the suffering land they see before them, and leave their posts, to seek out more meaningful opportunities [Hermit].
 
-**Dwarves'** natural hardiness seems to make them more resilient to the Blight, and means there is a greater proportion of Blessed among them. In many ways their lives are unchanged from during the Years of Darkness and before, able to produce works of art, culture, and craftmanship [Artisan, Merchant, Entertainer].
+**Dwarves'** natural hardiness seems to make them more resilient to the Blight, and means there is a greater proportion of Blessed among them. In many ways their lives are unchanged from during the Years of Darkness and before, able to produce works of art, culture, and craftsmanship [Artisan, Merchant, Entertainer].
 
 However, Dwarves are similarly reluctant to associate with humans. Many attribute this to mistreatment at the hands of the Old Empire, which was only a few generations ago in the lives of Dwarves. They are slow to forgive past transgressions, and while it would be unfair (to most) to say that they are grateful for the arrival of Silverblight, they do not wish to see a return to the old ways. Despite this, there are some who are willing to look past historic wrongs and take up arms together, against the Blight.
 
@@ -78,7 +78,7 @@ Halflings & Gnomes
 
 The homeland of the **Halflings** was overcome by the blight not long after the Old Empire had fallen. Few in number, those that remain exist as refugees or nomads, seeking to a return to a stable way of life. [Hermit, Wayfarer, Criminal]
 
-**Gnomes** are pervasive and persistent, existing often unseen, with their smally, tightly knit communities able to slip through the cracks. That's not to say that they haven't been affected by the blight, but their ingenuity has allowed them to remain in lands long abandoned by other folk. [Guide, Hermit]
+**Gnomes** are pervasive and persistent, existing often unseen, with their small, tightly knit communities able to slip through the cracks. That's not to say that they haven't been affected by the blight, but their ingenuity has allowed them to remain in lands long abandoned by other folk. [Guide, Hermit]
 
 Exotic Species
 --------------

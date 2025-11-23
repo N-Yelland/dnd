@@ -14,9 +14,9 @@ The final stage of the disease is the turn, and, unlike the other stages, it is 
 
 The time taken for the disease to progress is highly variable, and little is understood as to why. The infected can remain in the greying stage for a few days to a few months, and the blooming stage can last longer again still. In fact, a few individuals remain in the blooming stage for years, with little to no physical symptoms beyond the crystalline growths. Thought to be partially immune to the disease, they are hence called the half-Blessed.
 
-Blighstones
------------
+Blightstones
+------------
 
-While they remain attached to the living body of an infected person or creature, the blightstones are nearly indestructible, at least as hard as steel and as sharp as a knife's edge. They remain firmly part of the body - not removeable without significant harm. For some of the afflicted they can serve as excellent natural armour and weaponry.
+While they remain attached to the living body of an infected person or creature, the blightstones are nearly indestructible, at least as hard as steel and as sharp as a knife's edge. They remain firmly part of the body - not removable without significant harm. For some of the afflicted they can serve as excellent natural armour and weaponry.
 
 However, after death of the afflicted, the crystals loosen and, while still sharp, they become incredibly brittle - shattering into a cloud of fine shards after any sudden impact. Being cut or scratched by the crystals, or inhaling their dust form, almost always leads to an infection in humans and animals alike. Moreover, infections in this way progress rapidly: the skin around the infection site can start greying in minutes.

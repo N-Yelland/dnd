@@ -88,12 +88,6 @@
         "spacing": 0.5
     },
     {
-        "name": "Klathras",
-        "coords": [0.54331, 0.46000],
-        "type": "city",
-        "label_offset": "above"
-    },
-    {
         "top_text": "Bay of",
         "name": "Tears",
         "coords": [0.54883, 0.51427],
@@ -134,12 +128,6 @@
         "name": "Lake \\ Vossar",
         "coords": [0.55368, 0.33202],
         "type": "river"
-    },
-    {
-        "name": "Brightwater",
-        "coords": [0.53800, 0.30749],
-        "type": "city",
-        "label_offset": "above"
     },
     {
         "name": "Mullick",

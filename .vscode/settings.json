@@ -1,0 +1,18 @@
+{
+    "cSpell.customDictionaries": {
+        "erranite-words": {
+            "name": "erranite-words",
+            "path": "${workspaceFolder}/.vscode/dicts/erranite-words.txt",
+            "description": "Words that are real in Erran!",
+            "addWords": true
+        },
+        "coding-words": {
+            "name": "coding-words",
+            "path": "${workspaceFolder}/.vscode/dicts/coding-words.txt",
+            "description": "Words that are real in programming!",
+            "addWords": true
+        },
+        "custom": true, // Enable the `custom` dictionary
+        "internal-terms": false // Disable the `internal-terms` dictionary
+    }
+}
